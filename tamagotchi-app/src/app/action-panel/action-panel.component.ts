@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-action-panel',
@@ -8,39 +9,45 @@ import { Component, OnInit } from '@angular/core';
 export class ActionPanelComponent implements OnInit {
   hunger: number;
   happiness: number;
+  data: any;
 
-  constructor() {
-    this.hunger = 50; //take this from db
-    this.happiness = 50; //take this from db
-  }
+   constructor(private apiService: ApiService) {
+   }
 
-  ngOnInit() {
+   public ngOnInit(): void {
+    this.apiService.getData()
+      .subscribe((data: any): void => {
+        this.data = data;
+        console.log(data);
+      });
   }
 
   feed(){
-    if(this.hunger < 100){
-      this.hunger++;
+    if(this.data.hunger > 0){
+      this.data.hunger--;
     } else {
       //make the tamagotchi fat
     }
   }
 
   praise(){
-    if(this.happiness < 100){
-      this.happiness++;
+    if(this.data.happiness < 100){
+      this.data.happiness++;
+      this.apiService.updateHappiness(this.data.happiness);
     }
   }
 
   play(){
-    if(this.happiness < 100){
-      this.happiness++;
+    if(this.data.happiness < 100){
+      this.data.happiness++;
     }
   }
 
   scold(){
-    if(this.happiness > 0){
-      this.happiness--;
+    if(this.data.happiness > 0){
+      this.data.happiness--;
     }
   }
+
 
 }
