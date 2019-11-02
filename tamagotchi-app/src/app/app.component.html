@@ -36,10 +36,22 @@
                 -webkit-text-stroke-color: #CC33FF;
             }
 
+            .stats{
+                display:flex;
+            }
+
             .statvalue{
                 font-size:32px;
                 -webkit-text-stroke-width: 2px;
                 -webkit-text-stroke-color: #CC33FF;
+            }
+
+            .actionpanel{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width:80%;
+                margin-top:100px;
             }
         </style>
     </head>
@@ -61,9 +73,10 @@
                     <h3 class="statvalue"> {{hunger}} </h3>
                 </div>
             </div>
+            <div class="actionpanelcontainer">
+                <app-action-panel class="actionpanel"></app-action-panel>
+            </div>
         </div>
     </body>
 </html>
-
-<app-action-panel></app-action-panel>
 <router-outlet></router-outlet>
