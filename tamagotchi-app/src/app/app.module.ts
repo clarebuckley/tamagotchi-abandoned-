@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './api.service';
 import { StorageServiceModule } from 'ngx-webstorage-service';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     HttpClientModule,
     StorageServiceModule
   ],
-  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

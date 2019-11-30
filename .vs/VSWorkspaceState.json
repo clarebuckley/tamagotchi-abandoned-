@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\tamagotchi-app",
+    "\\tamagotchi-app\\src",
+    "\\tamagotchi-app\\src\\app",
+    "\\tamagotchi-app\\src\\app\\action-panel",
+    "\\tamagotchi-app\\src\\assets"
   ],
   "PreviewInSolutionExplorer": false
 }
