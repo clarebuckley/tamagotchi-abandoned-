@@ -1,5 +1,8 @@
-.action-bar {
-  border: 1px solid #fff0;
-  display: flex;
-  justify-content: space-around;
+
+.action-bar button {
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100px; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin: 50px;
 }
+

@@ -1,82 +1,30 @@
-<html>
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-        <style>
-            h1{
-                color:#CC33FF;
-                text-align:center;
-                font-family: 'Fredoka One', cursive;
-                font-size:100px;
-                -webkit-text-stroke-width: 4px;
-                -webkit-text-stroke-color: #00CC00;
-            }
-            .wrapper{
-                background-color: #FF99FF;
-                height:100vh;
-                margin:0;
-                top:0
-            }
-            .tamagotchi {
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 50%;
-              margin-top:70px;
-              margin-bottom:70px;
-            }
-
-            .stat{
-                float:left;
-                width:33%;
-                text-align:center;
-                font-family: 'Fredoka One', cursive;
-                font-size:22px;
-                color:#00CC00;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: #CC33FF;
-            }
-
-            .stats{
-                display:flex;
-            }
-
-            .statvalue{
-                font-size:32px;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: #CC33FF;
-            }
-
-            .actionpanel{
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width:80%;
-                margin-top:100px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="wrapper">
-            <h1>{{ title }}</h1>
-            <img class="tamagotchi" src="../assets/baby average tamagochi.jpg" />
-            <div class="stats">
-                <div class="stat">
-                    <h3> Age: </h3>
-                    <h3 class="statvalue"> {{age}} </h3>
-                </div>
-                <div class="stat">
-                    <h3> Happiness: </h3>
-                    <h3 class="statvalue"> {{happiness}} </h3>
-                </div>
-                <div class="stat">
-                    <h3> Hunger: </h3>
-                    <h3 class="statvalue"> {{hunger}} </h3>
-                </div>
-            </div>
-            <div class="actionpanelcontainer">
-                <app-action-panel class="actionpanel"></app-action-panel>
-            </div>
+<div class="wrapper">
+  <h1>{{ title }}</h1>
+  <div class="main-content">
+    <div id="col-side">
+        <app-action-panel class="actionpanel"></app-action-panel>
+      </div>
+      <div id="col-main">
+        <img class="tamagotchi" src="../assets/baby average tamagochi.jpg" />
+      </div>
+      <div id="col-side">
+       <div class="stat">
+          <h3> Age: </h3>
+          <h3 class="statvalue"> {{age}} </h3>
+       </div>
+       <div class="stat">
+           <h3> Happiness: </h3>
+           <h3 class="statvalue"> {{happiness}} </h3>
+       </div>
+       <div class="stat">
+          <h3> Hunger: </h3>
+          <h3 class="statvalue"> {{hunger}} </h3>
         </div>
-    </body>
-</html>
+      </div>
+  </div>
+
+    
+
+</div>
+
 <router-outlet></router-outlet>

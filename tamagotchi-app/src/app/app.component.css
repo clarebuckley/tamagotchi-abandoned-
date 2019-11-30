@@ -1,0 +1,40 @@
+#col-side {
+  float: left;
+  width: 30%;
+}
+
+#col-main{
+  float: left;
+  width: 40%;
+}
+
+
+h1{
+  color:#CC33FF;
+  text-align:center;
+  font-family: 'Fredoka One', cursive;
+  font-size:100px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #00CC00;
+}
+
+.tamagotchi {
+   display: block;
+   width: 700px;
+   margin-top:70px;
+   margin-bottom:70px;
+}
+
+.stat{
+  width: 100px; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin: 50px;
+}
+
+.statvalue{
+  font-size:32px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #CC33FF;
+  }
+
+
