@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './action-panel.component.html',
   styleUrls: ['./action-panel.component.css']
 })
-export class ActionPanelComponent implements OnInit {
+export class ActionPanelComponent {
   hunger: number;
   happiness: number;
   data: any;

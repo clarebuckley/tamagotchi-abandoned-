@@ -1,40 +1,47 @@
+
 #col-side {
-  float: left;
-  width: 30%;
+    display: block;
+    padding: 32px;
+    background-color: #3e1182;
+}
+
+.bottom{
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+
+.top {
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
 }
 
 #col-main{
-  float: left;
-  width: 40%;
+    display: block;
+    padding: 32px;
+    border: 1px solid black;
+    background-color: white;
 }
 
-
 h1{
-  color:#CC33FF;
-  text-align:center;
-  font-family: 'Fredoka One', cursive;
-  font-size:100px;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #00CC00;
+  color: white;
+  text-align:right;
+  font-size:45px;
 }
 
 .tamagotchi {
+   width: 300px;
    display: block;
-   width: 700px;
-   margin-top:70px;
-   margin-bottom:70px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: white;
 }
 
-.stat{
-  width: 100px; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
-  margin: 50px;
+.main-content{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+ }
+
+body{
+  background-color: #6e6e6e;
 }
-
-.statvalue{
-  font-size:32px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #CC33FF;
-  }
-
-

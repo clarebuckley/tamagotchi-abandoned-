@@ -1,30 +1,19 @@
-<div class="wrapper">
-  <h1>{{ title }}</h1>
-  <div class="main-content">
-    <div id="col-side">
+<body>
+<div class="main-content">
+    <h1>{{ title }}</h1>
+    <!-- START BUTTON ROW -->
+    <div id="col-side" class="top">
         <app-action-panel class="actionpanel"></app-action-panel>
-      </div>
-      <div id="col-main">
-        <img class="tamagotchi" src="../assets/baby average tamagochi.jpg" />
-      </div>
-      <div id="col-side">
-       <div class="stat">
-          <h3> Age: </h3>
-          <h3 class="statvalue"> {{age}} </h3>
-       </div>
-       <div class="stat">
-           <h3> Happiness: </h3>
-           <h3 class="statvalue"> {{happiness}} </h3>
-       </div>
-       <div class="stat">
-          <h3> Hunger: </h3>
-          <h3 class="statvalue"> {{hunger}} </h3>
-        </div>
-      </div>
-  </div>
-
-    
-
+    </div>
+    <!-- START TAMAGOTCHI AVATAR -->
+    <div id="col-main">
+        <img class="tamagotchi" src="../assets/baby-average/baby-average.gif" />
+    </div>
+    <!-- START STATS ROW -->
+    <div id="col-side" class="bottom">
+      <app-stats></app-stats>
+    </div>
 </div>
+</body>
 
 <router-outlet></router-outlet>

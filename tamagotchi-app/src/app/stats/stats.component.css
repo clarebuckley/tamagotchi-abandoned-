@@ -1,0 +1,15 @@
+.stats-container{
+  display:flex;
+  justify-content: space-around;
+}
+
+.stat{
+  width: 100px; 
+  margin: 50px;
+  color: white;
+}
+
+.statvalue{
+  font-size:32px;
+  color: white;
+  }

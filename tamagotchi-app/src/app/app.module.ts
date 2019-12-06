@@ -10,11 +10,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { StorageServiceModule } from 'ngx-webstorage-service';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { StatsComponent } from './stats/stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActionPanelComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     MatButtonModule,
     MatButtonToggleModule,
     HttpClientModule,
-    StorageServiceModule
+    StorageServiceModule,
+    FlexLayoutModule
   ],
   bootstrap: [AppComponent]
 })

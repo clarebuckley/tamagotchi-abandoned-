@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tamagotchi++';
-
-  hunger = 0;
-  happiness = 0;
-  age = 0;
 }

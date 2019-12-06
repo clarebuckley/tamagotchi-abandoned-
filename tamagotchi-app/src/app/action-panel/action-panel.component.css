@@ -1,8 +1,10 @@
-
-.action-bar button {
-  cursor: pointer; /* Pointer/hand icon */
-  width: 100px; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
-  margin: 50px;
+.action-bar {
+  cursor: pointer;
+  display:flex;
+  justify-content: space-around;
 }
 
+button {
+  width: 80px;
+  height: 80px;
+}
