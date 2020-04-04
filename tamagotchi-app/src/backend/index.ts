@@ -1,10 +1,11 @@
 import * as express from 'express'
-const app = express()
+import * as bodyParser from 'body-parser'
+import * as cors from 'cors'
 
-const bodyParser = require('body-parser')
+const app = express()
 app.use(bodyParser.json)
 
-const cors = require('cors')
+
 var corsOptions = {
   origin: 'http://example.com',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
@@ -27,14 +28,19 @@ app.route('/api/food').get((req, res) => {
 
 app.route('/api/food/:name').get((req, res) => {
   const requestedFoodName = req.params['name'];
-  res.send({ name: requestedCatName });
+  res.send({ name: requestedFoodName });
 })
 
+app.route('/api/tamagotchi').get((req,res) => {
+  res.send({
+    tamagotchi: {
+      name: 'Dan',
+      age: 0,
+      happiness: 50
+    }
+  })
+})
 
-//app.route('/api/something').post((req, res) => {
- // res.send(201, req.body)
-//})
-
-//app.route('/api/cats/:something').delete((req, res) => {
-//  res.sendStatus(204)
-//})
+app.route('/api/tamagotchi').put((req, res) => {
+  res.send(200, req.body)
+})
